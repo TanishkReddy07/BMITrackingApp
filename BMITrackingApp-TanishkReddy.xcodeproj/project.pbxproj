@@ -13,6 +13,15 @@
 		A03F01632947A3FF00224D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03F01612947A3FF00224D29 /* Main.storyboard */; };
 		A03F01652947A40200224D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03F01642947A40200224D29 /* Assets.xcassets */; };
 		A03F01682947A40200224D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03F01662947A40200224D29 /* LaunchScreen.storyboard */; };
+		A03F01702947AF3C00224D29 /* BMITrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F016F2947AF3C00224D29 /* BMITrackingViewController.swift */; };
+		A03F01732947B16800224D29 /* BMIData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A03F01712947B16700224D29 /* BMIData.xcdatamodeld */; };
+		A03F01782947B3AC00224D29 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01742947B3AC00224D29 /* History+CoreDataClass.swift */; };
+		A03F01792947B3AC00224D29 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01752947B3AC00224D29 /* History+CoreDataProperties.swift */; };
+		A03F017A2947B3AC00224D29 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01762947B3AC00224D29 /* Person+CoreDataClass.swift */; };
+		A03F017B2947B3AC00224D29 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01772947B3AC00224D29 /* Person+CoreDataProperties.swift */; };
+		A03F017E2947B43400224D29 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F017D2947B43400224D29 /* CoreDataStack.swift */; };
+		A03F01802947B4BB00224D29 /* PersonRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F017F2947B4BB00224D29 /* PersonRespository.swift */; };
+		A03F01822947B4CF00224D29 /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01812947B4CF00224D29 /* HistoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		A03F01642947A40200224D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03F01672947A40200224D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A03F01692947A40200224D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A03F016F2947AF3C00224D29 /* BMITrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingViewController.swift; sourceTree = "<group>"; };
+		A03F01722947B16800224D29 /* BMIData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BMIData.xcdatamodel; sourceTree = "<group>"; };
+		A03F01742947B3AC00224D29 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A03F01752947B3AC00224D29 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A03F01762947B3AC00224D29 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A03F01772947B3AC00224D29 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A03F017D2947B43400224D29 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A03F017F2947B4BB00224D29 /* PersonRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRespository.swift; sourceTree = "<group>"; };
+		A03F01812947B4CF00224D29 /* HistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,7 @@
 		A03F014F2947A3FF00224D29 = {
 			isa = PBXGroup;
 			children = (
+				A03F017C2947B3B100224D29 /* coreData */,
 				A03F015A2947A3FF00224D29 /* BMITrackingApp-TanishkReddy */,
 				A03F01592947A3FF00224D29 /* Products */,
 			);
@@ -59,12 +78,28 @@
 				A03F015B2947A3FF00224D29 /* AppDelegate.swift */,
 				A03F015D2947A3FF00224D29 /* SceneDelegate.swift */,
 				A03F015F2947A3FF00224D29 /* BMIPersonalInformationViewController.swift */,
+				A03F016F2947AF3C00224D29 /* BMITrackingViewController.swift */,
 				A03F01612947A3FF00224D29 /* Main.storyboard */,
 				A03F01642947A40200224D29 /* Assets.xcassets */,
 				A03F01662947A40200224D29 /* LaunchScreen.storyboard */,
 				A03F01692947A40200224D29 /* Info.plist */,
+				A03F01712947B16700224D29 /* BMIData.xcdatamodeld */,
 			);
 			path = "BMITrackingApp-TanishkReddy";
+			sourceTree = "<group>";
+		};
+		A03F017C2947B3B100224D29 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				A03F01742947B3AC00224D29 /* History+CoreDataClass.swift */,
+				A03F01752947B3AC00224D29 /* History+CoreDataProperties.swift */,
+				A03F01762947B3AC00224D29 /* Person+CoreDataClass.swift */,
+				A03F01772947B3AC00224D29 /* Person+CoreDataProperties.swift */,
+				A03F017D2947B43400224D29 /* CoreDataStack.swift */,
+				A03F017F2947B4BB00224D29 /* PersonRespository.swift */,
+				A03F01812947B4CF00224D29 /* HistoryRepository.swift */,
+			);
+			path = coreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03F017A2947B3AC00224D29 /* Person+CoreDataClass.swift in Sources */,
+				A03F01792947B3AC00224D29 /* History+CoreDataProperties.swift in Sources */,
+				A03F017B2947B3AC00224D29 /* Person+CoreDataProperties.swift in Sources */,
+				A03F01702947AF3C00224D29 /* BMITrackingViewController.swift in Sources */,
+				A03F01822947B4CF00224D29 /* HistoryRepository.swift in Sources */,
 				A03F01602947A3FF00224D29 /* BMIPersonalInformationViewController.swift in Sources */,
+				A03F017E2947B43400224D29 /* CoreDataStack.swift in Sources */,
 				A03F015C2947A3FF00224D29 /* AppDelegate.swift in Sources */,
+				A03F01732947B16800224D29 /* BMIData.xcdatamodeld in Sources */,
+				A03F01802947B4BB00224D29 /* PersonRespository.swift in Sources */,
+				A03F01782947B3AC00224D29 /* History+CoreDataClass.swift in Sources */,
 				A03F015E2947A3FF00224D29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +402,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A03F01712947B16700224D29 /* BMIData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A03F01722947B16800224D29 /* BMIData.xcdatamodel */,
+			);
+			currentVersion = A03F01722947B16800224D29 /* BMIData.xcdatamodel */;
+			path = BMIData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A03F01502947A3FF00224D29 /* Project object */;
 }
