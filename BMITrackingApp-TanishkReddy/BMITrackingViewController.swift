@@ -34,6 +34,7 @@ class BMITrackingViewController: UIViewController {
         self.view.addSubview(addView)
     }
     
+    // add new weight and bmi to database
     func addNewWeight(weight: Double) {
         Task.init {
             let personalInfo = try? await PersonRespository.shared.getPerson()
@@ -46,6 +47,7 @@ class BMITrackingViewController: UIViewController {
         return (weight/(height*height))
     }
     
+    //get BMI tracking history from database
     func getHistory() async {
         
             let his = try? await HistoryRepository.shared.getAllHistory()

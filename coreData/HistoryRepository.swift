@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+//BMI history CRUD oprations
 class HistoryRepository {
     
     static let shared = HistoryRepository()
@@ -34,7 +35,7 @@ class HistoryRepository {
     }
     
     
-    
+    // add BMI information to database
     func addBMI(bmi: Double,height: Double, weight: Double, date: Date) async -> History? {
         let newRecord = History(context: context)
         newRecord.setValue(bmi, forKey: #keyPath(History.bmi))
@@ -46,6 +47,7 @@ class HistoryRepository {
         return newRecord
     }
     
+    // update BMI information to database
     func updateBMI(history: History, weight: Double, bmi: Double) async {
         history.weight = weight
         history.bmi = bmi

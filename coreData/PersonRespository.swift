@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+//Personal information CRUD oprations
 class PersonRespository {
     
     static let shared = PersonRespository()
@@ -16,6 +17,7 @@ class PersonRespository {
     
     let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
     
+    // get Personal information from database
     func getPerson() async throws->  Person? {
         let personFetch: NSFetchRequest<Person> = Person.fetchRequest()
         
@@ -30,7 +32,7 @@ class PersonRespository {
     }
     
     
-    
+    // add Personal information to database
     func addPerson(name: String, age: Int, gender: String, weight: Double, height: Double) async -> Person? {
         
         let personFetch: NSFetchRequest<Person> = Person.fetchRequest()

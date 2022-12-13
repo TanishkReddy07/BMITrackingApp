@@ -32,6 +32,7 @@ class BMIPersonalInformationViewController: UIViewController {
         
     }
     
+    // get  personal information from database
     func fetchFromDB() {
         Task.init {
             self.person = try? await PersonRespository.shared.getPerson()
@@ -85,18 +86,22 @@ class BMIPersonalInformationViewController: UIViewController {
         
     }
     
+    // lb to kg conversion
     func lbTokg(lb: Double) -> Double {
         return lb/2.205
     }
     
+    // inches to meter conversion
     func inToM(inches: Double) -> Double {
         return inches/39.37
     }
     
+    // claculate BMI
     func getBMI(weight: Double, height: Double) -> Double {
         return (weight/(height*height))
     }
     
+    //get BMI caretegoty
     func getBMIMessage(bmi: Double) -> String {
         if bmi < 16 {
             return "Severe Thinness"
