@@ -24,7 +24,11 @@ class BMIPersonalInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        heightTextField.delegate = self
+        weightTextField.delegate = self
+        genderTextField.delegate = self
+        ageTextField.delegate = self
+        nameTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,5 +139,10 @@ class BMIPersonalInformationViewController: UIViewController {
     
 }
 
+extension BMIPersonalInformationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+}
 
 
