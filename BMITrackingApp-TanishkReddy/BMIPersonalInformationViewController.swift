@@ -76,7 +76,7 @@ class BMIPersonalInformationViewController: UIViewController {
             let bmi = getBMI(weight: weight, height: height)
             let category = getBMIMessage(bmi: bmi)
             _ = await PersonRespository.shared.addPerson(name: name, age: age, gender: gender, weight: weight, height: height)
-            _ = await HistoryRepository.shared.addBMI(bmi: bmi, weight: weight, date: Date())
+            _ = await HistoryRepository.shared.addBMI(bmi: bmi, height: height, weight: weight, date: Date())
             tabBarController?.selectedIndex = 1
             showAlert(message: String(format: "BMI: %.2f \n Category: %@", bmi, category))
             fetchFromDB()

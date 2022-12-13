@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryEditView" customModule="BMITrackingApp_TanishkReddy" customModuleProvider="target">
+            <connections>
+                <outlet property="weightTextField" destination="t4z-db-m22" id="pJe-CX-ePe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-MM-edv">
+                    <rect key="frame" x="26.5" y="190.5" width="267" height="187"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4O6-aN-LJU">
+                            <rect key="frame" x="49" y="53" width="169" height="81"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Ho-Jf2">
+                                    <rect key="frame" x="0.0" y="0.0" width="169" height="34"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4z-db-m22">
+                                            <rect key="frame" x="72" y="0.0" width="97" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="coi-Nt-2iD"/>
+                                                <constraint firstAttribute="width" constant="97" id="feJ-6e-vCO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI3-kn-jwK">
+                                            <rect key="frame" x="10" y="6.5" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="rI3-kn-jwK" firstAttribute="centerY" secondItem="xDN-Ho-Jf2" secondAttribute="centerY" id="QvU-Vn-6LQ"/>
+                                        <constraint firstItem="t4z-db-m22" firstAttribute="leading" secondItem="rI3-kn-jwK" secondAttribute="trailing" constant="8" symbolic="YES" id="SAT-f5-g6o"/>
+                                        <constraint firstItem="rI3-kn-jwK" firstAttribute="leading" secondItem="xDN-Ho-Jf2" secondAttribute="leading" constant="10" id="cu6-5j-dnd"/>
+                                        <constraint firstAttribute="trailing" secondItem="t4z-db-m22" secondAttribute="trailing" id="pBY-aM-8LH"/>
+                                        <constraint firstItem="t4z-db-m22" firstAttribute="top" secondItem="xDN-Ho-Jf2" secondAttribute="top" id="sUF-Xi-EM4"/>
+                                        <constraint firstAttribute="bottom" secondItem="t4z-db-m22" secondAttribute="bottom" id="yOH-hA-OYo"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWd-vD-8KE">
+                                    <rect key="frame" x="23.5" y="46" width="122" height="35"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Save/Update"/>
+                                    <connections>
+                                        <action selector="saveOrUpdateClicked:" destination="-1" eventType="touchUpInside" id="phZ-ow-Zc1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="xDN-Ho-Jf2" firstAttribute="leading" secondItem="4O6-aN-LJU" secondAttribute="leading" id="2EW-XL-S0O"/>
+                                <constraint firstItem="eWd-vD-8KE" firstAttribute="top" secondItem="xDN-Ho-Jf2" secondAttribute="bottom" constant="12" id="IR1-OF-O5W"/>
+                                <constraint firstItem="eWd-vD-8KE" firstAttribute="centerX" secondItem="xDN-Ho-Jf2" secondAttribute="centerX" id="WoN-1m-LEw"/>
+                                <constraint firstAttribute="trailing" secondItem="xDN-Ho-Jf2" secondAttribute="trailing" id="cGH-ih-kNz"/>
+                                <constraint firstItem="xDN-Ho-Jf2" firstAttribute="top" secondItem="4O6-aN-LJU" secondAttribute="top" id="dd8-d6-1W7"/>
+                                <constraint firstAttribute="bottom" secondItem="eWd-vD-8KE" secondAttribute="bottom" id="xdO-5v-xNL"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-sB-ppu">
+                            <rect key="frame" x="217" y="0.0" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="EEj-F8-Edj"/>
+                                <constraint firstAttribute="height" constant="40" id="M8d-35-1Ql"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
+                            <connections>
+                                <action selector="closeClicked:" destination="-1" eventType="touchUpInside" id="xKA-dR-5h4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="4O6-aN-LJU" firstAttribute="centerX" secondItem="Dhx-MM-edv" secondAttribute="centerX" id="EOw-LQ-Ovu"/>
+                        <constraint firstAttribute="height" constant="187" id="NCK-m7-eGi"/>
+                        <constraint firstAttribute="trailing" secondItem="aHX-sB-ppu" secondAttribute="trailing" id="TZH-qx-5JP"/>
+                        <constraint firstItem="aHX-sB-ppu" firstAttribute="top" secondItem="Dhx-MM-edv" secondAttribute="top" id="W5S-QS-RR4"/>
+                        <constraint firstItem="4O6-aN-LJU" firstAttribute="centerY" secondItem="Dhx-MM-edv" secondAttribute="centerY" id="ZhQ-6i-lhw"/>
+                        <constraint firstAttribute="width" constant="267" id="boC-Sj-oj7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.13135897402731789" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Dhx-MM-edv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wbM-Dm-sTj"/>
+                <constraint firstItem="Dhx-MM-edv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xgu-hW-xzo"/>
+            </constraints>
+            <point key="canvasLocation" x="-52" y="-213"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

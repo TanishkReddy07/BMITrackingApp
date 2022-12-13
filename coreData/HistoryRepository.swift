@@ -35,15 +35,22 @@ class HistoryRepository {
     
     
     
-    func addBMI(bmi: Double, weight: Double, date: Date) async -> History? {
+    func addBMI(bmi: Double,height: Double, weight: Double, date: Date) async -> History? {
         let newRecord = History(context: context)
         newRecord.setValue(bmi, forKey: #keyPath(History.bmi))
         newRecord.setValue(weight, forKey: #keyPath(History.weight))
         newRecord.setValue(date, forKey: #keyPath(History.date))
-        
+        newRecord.setValue(height, forKey: #keyPath(History.height))
         await AppDelegate.sharedAppDelegate.coreDataStack.saveContext() // Save changes in CoreData
         
         return newRecord
+    }
+    
+    func updateBMI(history: History, weight: Double, bmi: Double) async {
+        history.weight = weight
+        history.bmi = bmi
+        await AppDelegate.sharedAppDelegate.coreDataStack.saveContext() // Save changes in CoreData
+        
     }
     
     // delete a BMI

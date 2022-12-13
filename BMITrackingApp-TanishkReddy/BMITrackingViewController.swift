@@ -27,7 +27,23 @@ class BMITrackingViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        //
+        let addView = HistoryEditView(frame: self.view.frame)
+        addView.action = { [weak self] (weight) in
+            self?.addNewWeight(weight: weight)
+        }
+        self.view.addSubview(addView)
+    }
+    
+    func addNewWeight(weight: Double) {
+        Task.init {
+            let personalInfo = try? await PersonRespository.shared.getPerson()
+            _ = await HistoryRepository.shared.addBMI(bmi: getBMI(weight: weight, height: personalInfo?.height ?? 0.0), height: personalInfo?.height ?? 0.0, weight: weight, date: Date())
+            await getHistory()
+        }
+    }
+    
+    func getBMI(weight: Double, height: Double) -> Double {
+        return (weight/(height*height))
     }
     
     func getHistory() async {
@@ -63,7 +79,28 @@ extension BMITrackingViewController: UITableViewDelegate, UITableViewDataSource 
             
         }
         longSwipeToDelete.backgroundColor = .red
-        return UISwipeActionsConfiguration(actions: [longSwipeToDelete])
+        
+        let swipeToEdit = UIContextualAction(style: .destructive,
+                                       title: "Edit") { [weak self] (action, view, completionHandler) in
+            print("Edit")
+            self?.editBMI(row: indexPath.row)
+            
+        }
+        longSwipeToDelete.backgroundColor = .blue
+        
+        return UISwipeActionsConfiguration(actions: [longSwipeToDelete,swipeToEdit])
+    }
+    
+    func editBMI(row: Int) {
+        let bmi = self.history[row]
+        let addView = HistoryEditView(frame: self.view.frame)
+        addView.action = { [weak self] (weight) in
+            Task.init {
+                _ = await HistoryRepository.shared.updateBMI(history: bmi, weight: weight, bmi: self?.getBMI(weight: weight, height: bmi.height) ?? 0.0)
+                await self?.getHistory()
+            }
+        }
+        self.view.addSubview(addView)
     }
     
     func deleteBMI(row: Int) {
