@@ -8,24 +8,20 @@
 import Foundation
 import CoreData
 
-class HistoryRepository {
+class PersonRespository {
     
-    static let shared = HistoryRepository()
+    static let shared = PersonRespository()
     
     private init () {}
     
     let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
     
-    func getAllHistory() async throws->  [History] {
-        let historyFetch: NSFetchRequest<History> = History.fetchRequest()
+    func getPerson() async throws->  Person? {
+        let personFetch: NSFetchRequest<Person> = Person.fetchRequest()
         
         do {
-            let results = try context.fetch(historyFetch)
-            var history: [History] = []
-            for result in results {
-                history.append(result)
-            }
-            return history
+            let results = try context.fetch(personFetch)
+            return results.first
         } catch let error as NSError {
             print("Fetch error: \(error) description: \(error.userInfo)")
             fatalError()
@@ -35,14 +31,38 @@ class HistoryRepository {
     
     
     
-    func addcar(bmi: Double, weight: Double, date: Date) async -> History? {
-        let newRecord = History(context: context)
-        newRecord.setValue(bmi, forKey: #keyPath(History.bmi))
-        newRecord.setValue(weight, forKey: #keyPath(History.weight))
-        newRecord.setValue(date, forKey: #keyPath(History.date))
+    func addPerson(name: String, age: Int, gender: String, weight: Double, height: Double) async -> Person? {
         
-        await AppDelegate.sharedAppDelegate.coreDataStack.saveContext() // Save changes in CoreData
+        let personFetch: NSFetchRequest<Person> = Person.fetchRequest()
         
-        return newRecord
+        do {
+            let results = try context.fetch(personFetch)
+            if results.first == nil {
+                let newRecord = Person(context: context)
+                newRecord.setValue(name, forKey: #keyPath(Person.name))
+                newRecord.setValue(age, forKey: #keyPath(Person.age))
+                newRecord.setValue(gender, forKey: #keyPath(Person.gender))
+                newRecord.setValue(weight, forKey: #keyPath(Person.weight))
+                newRecord.setValue(height, forKey: #keyPath(Person.height))
+                
+                await AppDelegate.sharedAppDelegate.coreDataStack.saveContext() // Save changes in CoreData
+                
+                return newRecord
+            } else {
+                results.first?.name = name
+                results.first?.age = Int64(age)
+                results.first?.gender = gender
+                results.first?.weight = weight
+                results.first?.height = height
+                await AppDelegate.sharedAppDelegate.coreDataStack.saveContext() // Save changes in CoreData
+                
+                return results.first!
+            }
+        } catch let error as NSError {
+            print("Fetch error: \(error) description: \(error.userInfo)")
+            fatalError()
+        }
+        
+        
     }
 }

@@ -22,6 +22,8 @@
 		A03F017E2947B43400224D29 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F017D2947B43400224D29 /* CoreDataStack.swift */; };
 		A03F01802947B4BB00224D29 /* PersonRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F017F2947B4BB00224D29 /* PersonRespository.swift */; };
 		A03F01822947B4CF00224D29 /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01812947B4CF00224D29 /* HistoryRepository.swift */; };
+		A03F01852947C88A00224D29 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F01832947C88A00224D29 /* HistoryTableViewCell.swift */; };
+		A03F01862947C88A00224D29 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03F01842947C88A00224D29 /* HistoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		A03F017D2947B43400224D29 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A03F017F2947B4BB00224D29 /* PersonRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRespository.swift; sourceTree = "<group>"; };
 		A03F01812947B4CF00224D29 /* HistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
+		A03F01832947C88A00224D29 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		A03F01842947C88A00224D29 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				A03F01662947A40200224D29 /* LaunchScreen.storyboard */,
 				A03F01692947A40200224D29 /* Info.plist */,
 				A03F01712947B16700224D29 /* BMIData.xcdatamodeld */,
+				A03F01832947C88A00224D29 /* HistoryTableViewCell.swift */,
+				A03F01842947C88A00224D29 /* HistoryTableViewCell.xib */,
 			);
 			path = "BMITrackingApp-TanishkReddy";
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			files = (
 				A03F01682947A40200224D29 /* LaunchScreen.storyboard in Resources */,
 				A03F01652947A40200224D29 /* Assets.xcassets in Resources */,
+				A03F01862947C88A00224D29 /* HistoryTableViewCell.xib in Resources */,
 				A03F01632947A3FF00224D29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +182,7 @@
 			files = (
 				A03F017A2947B3AC00224D29 /* Person+CoreDataClass.swift in Sources */,
 				A03F01792947B3AC00224D29 /* History+CoreDataProperties.swift in Sources */,
+				A03F01852947C88A00224D29 /* HistoryTableViewCell.swift in Sources */,
 				A03F017B2947B3AC00224D29 /* Person+CoreDataProperties.swift in Sources */,
 				A03F01702947AF3C00224D29 /* BMITrackingViewController.swift in Sources */,
 				A03F01822947B4CF00224D29 /* HistoryRepository.swift in Sources */,

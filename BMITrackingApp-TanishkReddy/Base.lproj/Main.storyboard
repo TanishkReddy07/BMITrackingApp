@@ -128,19 +128,28 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0P2-64-bPb">
-                                                        <rect key="frame" x="80" y="8" width="225" height="34"/>
+                                                        <rect key="frame" x="80" y="8" width="153" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="WZv-Vq-iCQ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-uW-I8P">
+                                                        <rect key="frame" x="238" y="9.5" width="67" height="32"/>
+                                                        <segments>
+                                                            <segment title="kg"/>
+                                                            <segment title="lb"/>
+                                                        </segments>
+                                                    </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="0P2-64-bPb" firstAttribute="centerY" secondItem="ydK-CU-jtP" secondAttribute="centerY" id="4Zt-tV-85C"/>
                                                     <constraint firstItem="0P2-64-bPb" firstAttribute="leading" secondItem="ydK-CU-jtP" secondAttribute="trailing" constant="5" id="8LF-xL-wNL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="0P2-64-bPb" secondAttribute="trailing" constant="15" id="UvN-JW-hG9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gQb-uW-I8P" secondAttribute="trailing" constant="15" id="LAq-jw-a90"/>
+                                                    <constraint firstItem="gQb-uW-I8P" firstAttribute="centerY" secondItem="0P2-64-bPb" secondAttribute="centerY" id="c4g-y0-51x"/>
+                                                    <constraint firstItem="gQb-uW-I8P" firstAttribute="leading" secondItem="0P2-64-bPb" secondAttribute="trailing" constant="5" id="cu4-iu-q11"/>
                                                     <constraint firstItem="ydK-CU-jtP" firstAttribute="centerY" secondItem="pV8-Zf-fy6" secondAttribute="centerY" id="ejh-5H-4s8"/>
                                                     <constraint firstAttribute="height" constant="50" id="vUU-N7-H1d"/>
                                                     <constraint firstItem="ydK-CU-jtP" firstAttribute="leading" secondItem="pV8-Zf-fy6" secondAttribute="leading" constant="15" id="zog-WJ-QDK"/>
@@ -159,21 +168,33 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEh-os-5iF">
-                                                        <rect key="frame" x="80" y="8" width="225" height="34"/>
+                                                        <rect key="frame" x="80" y="8" width="153" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="kAc-Ub-cYz"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FPP-wp-CDz">
+                                                        <rect key="frame" x="238" y="9.5" width="67" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="67" id="r7s-zp-q6e"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="m"/>
+                                                            <segment title="in"/>
+                                                        </segments>
+                                                    </segmentedControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="XEh-os-5iF" firstAttribute="leading" secondItem="ag4-tX-wql" secondAttribute="trailing" constant="5" id="3jp-Fp-jNJ"/>
                                                     <constraint firstAttribute="height" constant="50" id="E4q-ZK-5y6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FPP-wp-CDz" secondAttribute="trailing" constant="15" id="GCy-sG-IaO"/>
                                                     <constraint firstItem="ag4-tX-wql" firstAttribute="centerY" secondItem="IIn-Uz-gh4" secondAttribute="centerY" id="OVy-aV-MdD"/>
+                                                    <constraint firstItem="FPP-wp-CDz" firstAttribute="leading" secondItem="XEh-os-5iF" secondAttribute="trailing" constant="5" id="UDf-0n-JPs"/>
+                                                    <constraint firstItem="FPP-wp-CDz" firstAttribute="centerY" secondItem="XEh-os-5iF" secondAttribute="centerY" id="XkW-R0-0VS"/>
                                                     <constraint firstItem="ag4-tX-wql" firstAttribute="leading" secondItem="IIn-Uz-gh4" secondAttribute="leading" constant="15" id="asq-bk-DGv"/>
-                                                    <constraint firstAttribute="trailing" secondItem="XEh-os-5iF" secondAttribute="trailing" constant="15" id="gLI-p9-73I"/>
                                                     <constraint firstItem="XEh-os-5iF" firstAttribute="centerY" secondItem="ag4-tX-wql" secondAttribute="centerY" id="pzj-cC-FX1"/>
                                                 </constraints>
                                             </view>
@@ -185,6 +206,9 @@
                                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                                        <connections>
+                                                            <action selector="doneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtL-NU-wKg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -215,6 +239,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TA4-Dq-R0c"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="02s-RR-H3Y" id="ymw-H5-Dr7"/>
+                        <outlet property="genderTextField" destination="yuN-3j-wcU" id="eM8-gJ-TwG"/>
+                        <outlet property="heightTextField" destination="XEh-os-5iF" id="KPg-6N-RiK"/>
+                        <outlet property="heightUnitSegmentedControl" destination="FPP-wp-CDz" id="fvM-KX-fwB"/>
+                        <outlet property="nameTextField" destination="Fzx-za-6zf" id="ijk-lW-Oyw"/>
+                        <outlet property="weightTextField" destination="0P2-64-bPb" id="DRA-HM-JEm"/>
+                        <outlet property="weightUnitSegmentedControl" destination="gQb-uW-I8P" id="v7q-qi-tCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

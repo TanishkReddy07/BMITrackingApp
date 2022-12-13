@@ -18,7 +18,7 @@ extension History {
 
     @NSManaged public var date: Date?
     @NSManaged public var bmi: Double
-    @NSManaged public var weight: NSDecimalNumber?
+    @NSManaged public var weight: Double
 
 }
 
